@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- the click listener using the root view -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:id = "@+id/root_view"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:background = "@color/colorPrimary"
+    tools:context = "net.casetrue.dikri.RosaryCount">
+
+    <!-- this is a card view design -->
+    <androidx.cardview.widget.CardView
+        android:layout_width = "300dp"
+        android:layout_height = "300dp"
+        android:layout_margin = "@dimen/hiad_32_dp"
+        app:cardBackgroundColor = "@color/colorPrimaryDark"
+        app:cardCornerRadius = "@dimen/hiad_16_dp"
+        app:cardElevation = "@dimen/hiad_10_dp"
+        app:layout_constraintBottom_toTopOf = "@id/adBannerBottomGoogleHuawei"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent">
+
+        <!-- this is a Relative layout contain a TextView text -->
+        <RelativeLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:layout_margin = "@dimen/hiad_32_dp"
+            android:background = "@drawable/circle_count"
+            android:backgroundTint = "@color/colorPrimary"
+            android:padding = "@dimen/hiad_16_dp"
+            tools:targetApi = "lollipop">
+
+            <!-- this is a TextView when text will changed by click listener -->
+            <TextView
+                android:id = "@+id/txt_count_rosary"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_centerInParent = "true"
+                android:fontFamily = "@font/arb_droid_bold"
+                android:gravity = "center"
+                android:text = "@string/rosary_text_count"
+                android:textColor = "@color/colorWhite"
+                android:textSize = "50sp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- this is a google ads banner on bottom layout-->
+    <com.google.android.gms.ads.AdView
+        android:id = "@+id/adBannerBottomGoogleHuawei"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        app:adSize = "BANNER"
+        app:adUnitId = "ca-app-pub-6472869854715871/4961014616"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent">
+    </com.google.android.gms.ads.AdView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

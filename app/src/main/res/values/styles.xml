@@ -1,0 +1,59 @@
+<resources xmlns:tools = "http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name = "AppTheme" parent = "Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name = "colorPrimary">@color/colorPrimary</item>
+        <item name = "colorPrimaryDark">@color/colorPrimary</item>
+        <item name = "colorAccent">@color/colorPrimary</item>
+        <item name = "android:navigationBarColor" tools:ignore = "NewApi">@color/colorPrimary</item>
+    </style>
+
+    <style name = "buttonStyle">
+        <item name = "android:fontFamily">@font/cairo_bold</item>
+        <item name = "android:layout_width">match_parent</item>
+        <item name = "android:layout_height">wrap_content</item>
+        <item name = "android:layout_marginTop">10dp</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textSize">16sp</item>
+        <item name = "android:gravity">right</item>
+        <item name = "android:textColor">@color/colorPrimaryDark</item>
+        <item name = "android:background">@drawable/rounded_button</item>
+        <item name = "android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name = "android:padding">10dp</item>
+        <item name = "elevation">10dp</item>
+    </style>
+
+    <style name = "txtStyle">
+        <item name = "android:layout_width">match_parent</item>
+        <item name = "android:layout_height">wrap_content</item>
+        <item name = "android:background">@drawable/rounded_button</item>
+        <item name = "android:fontFamily">@font/cairo_bold</item>
+        <item name = "android:gravity">center</item>
+        <item name = "android:padding">16dp</item>
+        <item name = "backgroundTint">@color/colorPrimaryDark</item>
+        <item name = "android:textSize">16sp</item>
+        <item name = "android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name = "android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name = "btnStyle">
+        <item name = "android:layout_width">match_parent</item>
+        <item name = "android:layout_height">wrap_content</item>
+        <item name = "android:fontFamily">@font/cairo_bold</item>
+        <item name = "android:background">@drawable/round_btn_count</item>
+        <item name = "android:gravity">center</item>
+        <item name = "android:textSize">16sp</item>
+        <item name = "android:padding">5dp</item>
+        <item name = "android:layout_margin">16dp</item>
+        <item name = "android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name = "AppTheme.WhiteAccent">
+        <item name = "colorAccent">@color/colorWhite</item>
+        <item name = "android:topLeftRadius">20dp</item>
+        <item name = "android:topRightRadius">20dp</item>
+        <item name = "android:bottomLeftRadius">20dp</item>
+        <item name = "android:bottomRightRadius">20dp</item>
+    </style>
+
+</resources>

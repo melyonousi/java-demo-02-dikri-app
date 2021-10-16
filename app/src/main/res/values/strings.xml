@@ -1,0 +1,11 @@
+<resources>
+    <string name = "app_name">ذكري</string>
+    <string name = "morning">أذكار الصباح</string>
+    <string name = "evening">أذكار المساء</string>
+    <string name = "wakeUp">أذكار الإستيقاظ</string>
+    <string name = "sleep">أذكار النوم</string>
+    <string name = "salaat">أذكار الصلاة</string>
+    <string name = "dikrCount">عدد الأذكار المقروئة:\n0</string>
+    <string name = "rosary_text_count">0</string>
+    <string name = "rosary">السبحة</string>
+</resources>

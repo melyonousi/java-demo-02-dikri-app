@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name = "hiad_32_dp">32dp</dimen>
+    <dimen name = "hiad_16_dp">16dp</dimen>
+    <dimen name = "hiad_10_dp">10dp</dimen>
+</resources>
