@@ -39,7 +39,7 @@
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:layout_centerInParent = "true"
-                android:fontFamily = "@font/arb_droid_bold"
+                android:fontFamily = "@font/cairo_bold"
                 android:gravity = "center"
                 android:text = "@string/rosary_text_count"
                 android:textColor = "@color/colorWhite"

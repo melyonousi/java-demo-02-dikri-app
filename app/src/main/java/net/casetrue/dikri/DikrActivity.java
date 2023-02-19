@@ -3,6 +3,7 @@ package net.casetrue.dikri;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,8 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.MessageFormat;
 
-public class DikrActivity extends AppCompatActivity
-{
+public class DikrActivity extends AppCompatActivity {
 
     /**
      * this is a global declaration variables
@@ -24,15 +24,16 @@ public class DikrActivity extends AppCompatActivity
     int stockCount;
     TextView txtCount;
 
+    Loading loading;
+
     /**
      * this is onCreate layout dikr main
+     *
      * @param savedInstanceState
      */
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        try
-        {
+    protected void onCreate(Bundle savedInstanceState) {
+        try {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.dikr_main);
 
@@ -46,8 +47,9 @@ public class DikrActivity extends AppCompatActivity
              */
             loadData();
 
-        }catch (Exception exception)
-        {
+            loading = new Loading(DikrActivity.this);
+
+        } catch (Exception exception) {
             Toast.makeText(this, exception.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
@@ -56,8 +58,7 @@ public class DikrActivity extends AppCompatActivity
     /**
      * load data from sharedPref
      */
-    public void loadData()
-    {
+    public void loadData() {
         SharedPreferences sharedPreferences = getSharedPreferences(DIKRI_SHARED_PREFERENCE, MODE_PRIVATE);
         stockCount = sharedPreferences.getInt(DIKRI_TEXT, 0);
 
@@ -68,28 +69,39 @@ public class DikrActivity extends AppCompatActivity
      * this is onStart layout
      */
     @Override
-    protected void onStart()
-    {
-        try
-        {
+    protected void onStart() {
+        try {
             super.onStart();
 
             /*
              * load data save from sharedPref
              */
             loadData();
-        } catch (Exception m)
-        {
+        } catch (Exception m) {
             Toast.makeText(this, m.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        loading.dismissLoading();
+    }
+
     /**
-     * this is method send click main button layout
+     * this method send click main button layout
+     *
      * @param view
      */
-    public void dikrView(View view)
-    {
+    public void dikrView(View view) {
+        loading.startLoading();
+        Handler handler = new Handler();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                loading.dismissLoading();
+//            }
+//        }, 5000);
         Button btn = (Button) view;
         Intent intent = new Intent(getBaseContext(), dikrRead.class);
         intent.putExtra("EXTRA_SESSION_ID", String.valueOf(btn.getTag()));
@@ -98,10 +110,18 @@ public class DikrActivity extends AppCompatActivity
 
     /**
      * this method send click button rosary intent
+     *
      * @param view
      */
-    public void rosaryView(View view)
-    {
+    public void rosaryView(View view) {
+        loading.startLoading();
+//        Handler handler = new Handler();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                loading.dismissLoading();
+//            }
+//        }, 5000);
         Intent intent = new Intent(getBaseContext(), RosaryCount.class);
         startActivity(intent);
     }
