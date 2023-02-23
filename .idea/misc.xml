@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/elyon/Documents/github/mohamed_elyonousi/dhikri/dikri/app/src/main/res/layout/dikr_read.xml" value="0.25" />
+        <entry key="..\:/Users/elyon/Documents/github/mohamed_elyonousi/dhikri/dikri/app/src/main/res/layout/dikr_rosary.xml" value="0.2015625" />
+        <entry key="..\:/Users/elyon/Documents/github/mohamed_elyonousi/dhikri/dikri/app/src/main/res/layout/widget_read.xml" value="0.2015625" />
         <entry key="..\:/Users/elyon/Documents/github/mohamed_elyonousi/dikri/app/src/main/res/layout-night/loading.xml" value="0.358695652173913" />
         <entry key="..\:/Users/elyon/Documents/github/mohamed_elyonousi/dikri/app/src/main/res/layout-notnight/loading.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/elyon/Documents/github/mohamed_elyonousi/dikri/app/src/main/res/layout-v21/loading.xml" value="0.358695652173913" />
@@ -16,7 +19,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

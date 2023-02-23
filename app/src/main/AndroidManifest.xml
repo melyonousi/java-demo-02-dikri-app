@@ -34,7 +34,8 @@
             android:name = "net.casetrue.dikri.dikrRead">
         </activity>
         <activity
-            android:name = "net.casetrue.dikri.DikrActivity">
+            android:name = "net.casetrue.dikri.DikrActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name = "android.intent.action.MAIN"/>
 
